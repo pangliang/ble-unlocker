@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810599A01B1EAE3F00DC320D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */; };
+		810599A31B1EAE8200DC320D /* BlutoothIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 810599A21B1EAE8200DC320D /* BlutoothIO.m */; };
 		8156065B1B185A95005D160A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156065A1B185A95005D160A /* AppDelegate.m */; };
 		8156065D1B185A95005D160A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156065C1B185A95005D160A /* main.m */; };
 		815606601B185A95005D160A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156065F1B185A95005D160A /* ViewController.m */; };
 		815606621B185A95005D160A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815606611B185A95005D160A /* Images.xcassets */; };
-		815606651B185A95005D160A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815606631B185A95005D160A /* Main.storyboard */; };
 		815606711B185A95005D160A /* miband_unlockerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815606701B185A95005D160A /* miband_unlockerTests.m */; };
 		8156067C1B185B30005D160A /* MacLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156067B1B185B30005D160A /* MacLocker.m */; };
-		815606801B187191005D160A /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8156067F1B187191005D160A /* IOBluetooth.framework */; };
-		815606821B1871D4005D160A /* IOBluetoothUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 815606811B1871D4005D160A /* IOBluetoothUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		810599A11B1EAE8200DC320D /* BlutoothIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlutoothIO.h; sourceTree = "<group>"; };
+		810599A21B1EAE8200DC320D /* BlutoothIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlutoothIO.m; sourceTree = "<group>"; };
 		815606541B185A95005D160A /* miband-unlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "miband-unlocker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		815606581B185A95005D160A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815606591B185A95005D160A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,9 +45,6 @@
 		815606701B185A95005D160A /* miband_unlockerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = miband_unlockerTests.m; sourceTree = "<group>"; };
 		8156067A1B185B30005D160A /* MacLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacLocker.h; sourceTree = "<group>"; };
 		8156067B1B185B30005D160A /* MacLocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacLocker.m; sourceTree = "<group>"; };
-		8156067D1B186242005D160A /* login.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = login.framework; path = ../../../../System/Library/PrivateFrameworks/login.framework; sourceTree = "<group>"; };
-		8156067F1B187191005D160A /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
-		815606811B1871D4005D160A /* IOBluetoothUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetoothUI.framework; path = System/Library/Frameworks/IOBluetoothUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815606821B1871D4005D160A /* IOBluetoothUI.framework in Frameworks */,
-				815606801B187191005D160A /* IOBluetooth.framework in Frameworks */,
+				810599A01B1EAE3F00DC320D /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,9 +69,7 @@
 		8156064B1B185A95005D160A = {
 			isa = PBXGroup;
 			children = (
-				815606811B1871D4005D160A /* IOBluetoothUI.framework */,
-				8156067F1B187191005D160A /* IOBluetooth.framework */,
-				8156067D1B186242005D160A /* login.framework */,
+				8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */,
 				815606561B185A95005D160A /* miband-unlocker */,
 				8156066D1B185A95005D160A /* miband-unlockerTests */,
 				815606551B185A95005D160A /* Products */,
@@ -101,6 +97,8 @@
 				815606571B185A95005D160A /* Supporting Files */,
 				8156067A1B185B30005D160A /* MacLocker.h */,
 				8156067B1B185B30005D160A /* MacLocker.m */,
+				810599A11B1EAE8200DC320D /* BlutoothIO.h */,
+				810599A21B1EAE8200DC320D /* BlutoothIO.m */,
 			);
 			path = "miband-unlocker";
 			sourceTree = "<group>";
@@ -212,7 +210,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				815606621B185A95005D160A /* Images.xcassets in Resources */,
-				815606651B185A95005D160A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				815606601B185A95005D160A /* ViewController.m in Sources */,
+				810599A31B1EAE8200DC320D /* BlutoothIO.m in Sources */,
 				8156065D1B185A95005D160A /* main.m in Sources */,
 				8156065B1B185A95005D160A /* AppDelegate.m in Sources */,
 				8156067C1B185B30005D160A /* MacLocker.m in Sources */,

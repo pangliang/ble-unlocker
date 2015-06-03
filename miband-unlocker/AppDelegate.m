@@ -7,58 +7,23 @@
 //
 
 #import "AppDelegate.h"
-#import "MacLocker.h"
-#import <CoreBluetooth/CoreBluetooth.h>
+#import "BlutoothIO.h"
 
-@interface AppDelegate ()<CBCentralManagerDelegate>
-@property (strong,nonatomic) CBCentralManager* central;
+
+@interface AppDelegate()
+@property (atomic,strong) BlutoothIO* io;
+
 @end
 
 @implementation AppDelegate
 
-- (id)init
-{
-    NSLog(@"hello init");
-    if ((self = [super init]))
-    {
-//        self.central = [[CBCentralManager alloc]initWithDelegate:self queue:dispatch_get_main_queue()];
-    }
-    return self;
-}
-
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    self.central = [[CBCentralManager alloc]initWithDelegate:self queue:dispatch_get_main_queue()];
+    self.io = [[BlutoothIO alloc] init];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-
-}
-
-- (void)centralManagerDidUpdateState:(CBCentralManager *)central
-{
-    if (central.state == CBCentralManagerStatePoweredOn) {
-        NSLog(@"scanForPeripheralsWithServices");
-        [central scanForPeripheralsWithServices:nil
-                                        options:@{ CBCentralManagerScanOptionAllowDuplicatesKey : @YES}];
-        
-    }
-}
-
-- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     
-    NSLog(@"Peripheral connected");
 }
-
-- (void)centralManager:(CBCentralManager *)central
- didDiscoverPeripheral:(CBPeripheral *)peripheral
-     advertisementData:(NSDictionary *)advertisementData
-                  RSSI:(NSNumber *)RSSI {
-    
-    NSLog(@"Discovered %@", peripheral.name);
-    [central stopScan];
-}
-
 
 
 @end
