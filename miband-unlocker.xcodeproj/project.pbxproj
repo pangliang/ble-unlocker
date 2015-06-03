@@ -18,6 +18,8 @@
 		8190156B1B1EF50900FC2350 /* Chain_links_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8190156A1B1EF50900FC2350 /* Chain_links_24.png */; };
 		819015731B1EFFE300FC2350 /* MainPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819015711B1EFFE300FC2350 /* MainPopoverViewController.m */; };
 		819015741B1EFFE300FC2350 /* MainPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819015721B1EFFE300FC2350 /* MainPopoverViewController.xib */; };
+		819015751B1F198600FC2350 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */; };
+		819015791B1F1A6D00FC2350 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819015781B1F1A6D00FC2350 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		819015701B1EFFE300FC2350 /* MainPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPopoverViewController.h; sourceTree = "<group>"; };
 		819015711B1EFFE300FC2350 /* MainPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPopoverViewController.m; sourceTree = "<group>"; };
 		819015721B1EFFE300FC2350 /* MainPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainPopoverViewController.xib; sourceTree = "<group>"; };
+		819015761B1F19B500FC2350 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		819015781B1F1A6D00FC2350 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819015791B1F1A6D00FC2350 /* AppKit.framework in Frameworks */,
+				819015751B1F198600FC2350 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +80,8 @@
 		8156064B1B185A95005D160A = {
 			isa = PBXGroup;
 			children = (
+				819015781B1F1A6D00FC2350 /* AppKit.framework */,
+				819015761B1F19B500FC2350 /* CoreFoundation.framework */,
 				8190156A1B1EF50900FC2350 /* Chain_links_24.png */,
 				8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */,
 				815606561B185A95005D160A /* miband-unlocker */,

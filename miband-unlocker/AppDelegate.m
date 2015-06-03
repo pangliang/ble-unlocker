@@ -7,23 +7,19 @@
 //
 
 #import "AppDelegate.h"
-#import "BlutoothIO.h"
 #import "MainPopoverViewController.h"
 
 @interface AppDelegate()
-@property (atomic,strong) BlutoothIO* io;
 @property (strong, nonatomic) NSStatusItem *statusItem;
 @property (strong, nonatomic) NSPopover* popover;
+@property (strong, nonatomic) MainPopoverViewController* mainView;
 @end
 
 @implementation AppDelegate
 @synthesize statusItem;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    self.io = [[BlutoothIO alloc] init];
-    
     [self initStatusItem];
-    
 }
 
 - (void)initStatusItem{
@@ -34,8 +30,9 @@
     [statusItem setHighlightMode:YES];
     [self.statusItem setAction:@selector(statusItemClicked:)];
     
+    self.mainView = [[MainPopoverViewController alloc] init];
     _popover = [[NSPopover alloc] init];
-    _popover.contentViewController = [[MainPopoverViewController alloc] init];
+    _popover.contentViewController = self.mainView;
 }
 
 - (void)statusItemClicked:(id)sender {
@@ -43,7 +40,9 @@
         [_popover close];
     }else{
         [_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
+        [self.mainView.tableView reloadData];
     }
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

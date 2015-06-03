@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MainPopoverViewController : NSViewController
-
+@interface MainPopoverViewController : NSViewController<NSTableViewDelegate>
+@property(nonatomic,retain) IBOutlet NSTableView* tableView;
 @end

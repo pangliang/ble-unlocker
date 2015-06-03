@@ -10,5 +10,5 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 
 @interface BlutoothIO : NSObject<CBCentralManagerDelegate,CBPeripheralDelegate>
-
+@property (strong,nonatomic) NSMutableArray *peripherals;
 @end

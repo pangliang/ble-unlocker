@@ -9,7 +9,6 @@
 #import "BlutoothIO.h"
 @interface BlutoothIO()
 @property (strong,nonatomic) CBCentralManager* central;
-@property (strong,nonatomic) CBPeripheral* peripheral;
 @end
 
 @implementation BlutoothIO
@@ -19,6 +18,7 @@
     if ((self = [super init]))
     {
         self.central = [[CBCentralManager alloc]initWithDelegate:self queue:nil options:nil];
+        self.peripherals=[NSMutableArray new];
     }
     return self;
 }
@@ -52,7 +52,7 @@ didFailToConnectPeripheral:(CBPeripheral *)peripheral
     NSLog(@"Discovered %@,%@", peripheral.name, peripheral.identifier.UUIDString);
     [central stopScan];
     
-    self.peripheral = peripheral;
+    [self.peripherals addObject:peripheral];
     peripheral.delegate = self;
     [central connectPeripheral:peripheral options:nil];
 }
