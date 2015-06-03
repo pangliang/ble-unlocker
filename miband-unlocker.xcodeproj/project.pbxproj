@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		810599A01B1EAE3F00DC320D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */; };
 		810599A31B1EAE8200DC320D /* BlutoothIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 810599A21B1EAE8200DC320D /* BlutoothIO.m */; };
+		814194861B1EF133008B6B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815606631B185A95005D160A /* Main.storyboard */; };
 		8156065B1B185A95005D160A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156065A1B185A95005D160A /* AppDelegate.m */; };
 		8156065D1B185A95005D160A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156065C1B185A95005D160A /* main.m */; };
-		815606601B185A95005D160A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156065F1B185A95005D160A /* ViewController.m */; };
 		815606621B185A95005D160A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815606611B185A95005D160A /* Images.xcassets */; };
 		815606711B185A95005D160A /* miband_unlockerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815606701B185A95005D160A /* miband_unlockerTests.m */; };
 		8156067C1B185B30005D160A /* MacLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156067B1B185B30005D160A /* MacLocker.m */; };
+		8190156B1B1EF50900FC2350 /* Chain_links_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8190156A1B1EF50900FC2350 /* Chain_links_24.png */; };
+		819015731B1EFFE300FC2350 /* MainPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819015711B1EFFE300FC2350 /* MainPopoverViewController.m */; };
+		819015741B1EFFE300FC2350 /* MainPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819015721B1EFFE300FC2350 /* MainPopoverViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +39,6 @@
 		815606591B185A95005D160A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8156065A1B185A95005D160A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8156065C1B185A95005D160A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8156065E1B185A95005D160A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8156065F1B185A95005D160A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		815606611B185A95005D160A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		815606641B185A95005D160A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8156066A1B185A95005D160A /* miband-unlockerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "miband-unlockerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +46,10 @@
 		815606701B185A95005D160A /* miband_unlockerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = miband_unlockerTests.m; sourceTree = "<group>"; };
 		8156067A1B185B30005D160A /* MacLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacLocker.h; sourceTree = "<group>"; };
 		8156067B1B185B30005D160A /* MacLocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacLocker.m; sourceTree = "<group>"; };
+		8190156A1B1EF50900FC2350 /* Chain_links_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chain_links_24.png; sourceTree = "<group>"; };
+		819015701B1EFFE300FC2350 /* MainPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPopoverViewController.h; sourceTree = "<group>"; };
+		819015711B1EFFE300FC2350 /* MainPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPopoverViewController.m; sourceTree = "<group>"; };
+		819015721B1EFFE300FC2350 /* MainPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainPopoverViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +74,7 @@
 		8156064B1B185A95005D160A = {
 			isa = PBXGroup;
 			children = (
+				8190156A1B1EF50900FC2350 /* Chain_links_24.png */,
 				8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */,
 				815606561B185A95005D160A /* miband-unlocker */,
 				8156066D1B185A95005D160A /* miband-unlockerTests */,
@@ -90,8 +96,6 @@
 			children = (
 				815606591B185A95005D160A /* AppDelegate.h */,
 				8156065A1B185A95005D160A /* AppDelegate.m */,
-				8156065E1B185A95005D160A /* ViewController.h */,
-				8156065F1B185A95005D160A /* ViewController.m */,
 				815606611B185A95005D160A /* Images.xcassets */,
 				815606631B185A95005D160A /* Main.storyboard */,
 				815606571B185A95005D160A /* Supporting Files */,
@@ -99,6 +103,9 @@
 				8156067B1B185B30005D160A /* MacLocker.m */,
 				810599A11B1EAE8200DC320D /* BlutoothIO.h */,
 				810599A21B1EAE8200DC320D /* BlutoothIO.m */,
+				819015701B1EFFE300FC2350 /* MainPopoverViewController.h */,
+				819015711B1EFFE300FC2350 /* MainPopoverViewController.m */,
+				819015721B1EFFE300FC2350 /* MainPopoverViewController.xib */,
 			);
 			path = "miband-unlocker";
 			sourceTree = "<group>";
@@ -210,6 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				815606621B185A95005D160A /* Images.xcassets in Resources */,
+				819015741B1EFFE300FC2350 /* MainPopoverViewController.xib in Resources */,
+				8190156B1B1EF50900FC2350 /* Chain_links_24.png in Resources */,
+				814194861B1EF133008B6B96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,10 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815606601B185A95005D160A /* ViewController.m in Sources */,
 				810599A31B1EAE8200DC320D /* BlutoothIO.m in Sources */,
 				8156065D1B185A95005D160A /* main.m in Sources */,
 				8156065B1B185A95005D160A /* AppDelegate.m in Sources */,
+				819015731B1EFFE300FC2350 /* MainPopoverViewController.m in Sources */,
 				8156067C1B185B30005D160A /* MacLocker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

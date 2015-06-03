@@ -8,38 +8,42 @@
 
 #import "AppDelegate.h"
 #import "BlutoothIO.h"
-
+#import "MainPopoverViewController.h"
 
 @interface AppDelegate()
 @property (atomic,strong) BlutoothIO* io;
 @property (strong, nonatomic) NSStatusItem *statusItem;
-@property (assign, nonatomic) BOOL darkModeOn;
+@property (strong, nonatomic) NSPopover* popover;
 @end
 
 @implementation AppDelegate
+@synthesize statusItem;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.io = [[BlutoothIO alloc] init];
     
     [self initStatusItem];
+    
 }
 
 - (void)initStatusItem{
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     self.statusItem.image = [NSImage imageNamed:@"Chain_links_24.png"];
+    self.statusItem.alternateImage = [NSImage imageNamed:@"Chain_links_24.png"];
+    [statusItem setTitle:@"TEST"];
+    [statusItem setHighlightMode:YES];
+    [self.statusItem setAction:@selector(statusItemClicked:)];
     
-    NSMenu *menu = [[NSMenu alloc] init];
-    [menu addItemWithTitle:@"Open Feedbin" action:@selector(openFeedbin:) keyEquivalent:@""];
-    [menu addItemWithTitle:@"Refresh" action:@selector(getUnreadEntries:) keyEquivalent:@""];
-    
-    [menu addItem:[NSMenuItem separatorItem]];
-    [menu addItemWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
-    _statusItem.menu = menu;
+    _popover = [[NSPopover alloc] init];
+    _popover.contentViewController = [[MainPopoverViewController alloc] init];
 }
 
-- (void)itemClicked:(id)sender {
-    NSAlert * alert = [NSAlert alertWithMessageText:@"Bat signal acknowledged" defaultButton:@"Alright!" alternateButton:nil otherButton:nil informativeTextWithFormat:@"NSStatusItem was clicked"];
-    [alert runModal];
+- (void)statusItemClicked:(id)sender {
+    if([_popover isShown]){
+        [_popover close];
+    }else{
+        [_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
+    }
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
