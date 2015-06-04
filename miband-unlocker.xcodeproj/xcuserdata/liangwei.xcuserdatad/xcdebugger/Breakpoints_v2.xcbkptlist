@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "miband-unlocker/AppDelegate.m"
-            timestampString = "455095592.370169"
+            timestampString = "455108657.096263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-statusItemClicked:"
             landmarkType = "5">
          </BreakpointContent>

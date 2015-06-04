@@ -10,9 +10,9 @@
 
 @interface MacLocker : NSObject
 
-+ (BOOL)isScreenLocked;
-+ (void)lock;
-+ (void)unlock;
-+ (void)setPassword:(NSString*)p;
+- (BOOL)isScreenLocked;
+- (void)lock;
+- (void)unlock;
+- (void)setPassword:(NSString*)p;
 
 @end

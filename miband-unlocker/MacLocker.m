@@ -8,11 +8,20 @@
 
 #import "MacLocker.h"
 
-NSString *password = @"xmdb7lwc";
+@interface MacLocker()
+@property(nonatomic) NSString *password;
+@end
+
 
 @implementation MacLocker
 
-+ (BOOL)isScreenLocked
+- (id)init{
+    self = [super init];
+    self.password = @"xmdb7lwc";
+    return self;
+}
+
+- (BOOL)isScreenLocked
 {
     BOOL locked = NO;
     
@@ -26,12 +35,7 @@ NSString *password = @"xmdb7lwc";
     return locked;
 }
 
-+ (void)setPassword:(NSString*)p
-{
-    password = [p copy];
-}
-
-+ (void)lock
+- (void)lock
 {
     if ([self isScreenLocked]) return;
     io_registry_entry_t r = IORegistryEntryFromPath(kIOMasterPortDefault, "IOService:/IOResources/IODisplayWrangler");
@@ -51,11 +55,9 @@ NSString *password = @"xmdb7lwc";
             IOObjectRelease(r);
         }
     });
-    
-    
 }
 
-+ (void)unlock
+- (void)unlock
 {
     if (![self isScreenLocked]) return;
     io_registry_entry_t r = IORegistryEntryFromPath(kIOMasterPortDefault, "IOService:/IOResources/IODisplayWrangler");
@@ -67,7 +69,7 @@ NSString *password = @"xmdb7lwc";
     NSString *s = @"tell application \"System Events\" to keystroke \"%@\"\n\
     tell application \"System Events\" to keystroke return";
     
-    NSAppleScript *script = [[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:s, password]];
+    NSAppleScript *script = [[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:s, self.password]];
     [script executeAndReturnError:nil];
 }
 

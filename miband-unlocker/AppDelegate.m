@@ -13,11 +13,9 @@
 @interface AppDelegate()
 @property (strong, nonatomic) NSStatusItem *statusItem;
 @property (strong, nonatomic) NSPopover* popover;
-@property (strong, nonatomic) MainPopoverViewController* mainView;
 @end
 
 @implementation AppDelegate
-@synthesize statusItem;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self initStatusItem];
@@ -29,13 +27,11 @@
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     self.statusItem.image = [NSImage imageNamed:@"Chain_links_24.png"];
     self.statusItem.alternateImage = [NSImage imageNamed:@"Chain_links_24.png"];
-    [statusItem setTitle:@"TEST"];
-    [statusItem setHighlightMode:YES];
+    [self.statusItem setHighlightMode:YES];
     [self.statusItem setAction:@selector(statusItemClicked:)];
     
-    self.mainView = [[MainPopoverViewController alloc] init];
     _popover = [[NSPopover alloc] init];
-    _popover.contentViewController = self.mainView;
+    _popover.contentViewController = [[MainPopoverViewController alloc] init];
 }
 
 - (void)statusItemClicked:(id)sender {
