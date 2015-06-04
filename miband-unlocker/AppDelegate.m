@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainPopoverViewController.h"
+#import "BlutoothIO.h"
 
 @interface AppDelegate()
 @property (strong, nonatomic) NSStatusItem *statusItem;
@@ -20,6 +21,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self initStatusItem];
+    
+    [BlutoothIO getInstance];
 }
 
 - (void)initStatusItem{
@@ -40,7 +43,6 @@
         [_popover close];
     }else{
         [_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
-        [self.mainView.tableView reloadData];
     }
     
 }

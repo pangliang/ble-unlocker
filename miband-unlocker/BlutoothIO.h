@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface BlutoothIO : NSObject<CBCentralManagerDelegate,CBPeripheralDelegate>
-@property (strong,nonatomic) NSMutableArray *peripherals;
+@interface BlutoothIO : NSObject
+@property (strong,atomic) NSMutableDictionary *devices;
++ (BlutoothIO*) getInstance;
 @end

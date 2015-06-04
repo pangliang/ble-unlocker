@@ -8,44 +8,29 @@
 
 #import "MainPopoverViewController.h"
 #import "BlutoothIO.h"
+#import "Device.h"
+
 
 @interface MainPopoverViewController ()
-@property (atomic,strong) BlutoothIO* io;
-
+@property(nonatomic,retain)IBOutlet NSTextField* rssiLabel;
 @end
 
 @implementation MainPopoverViewController
 
-- (id)init{
-    
-    if ((self = [super init]))
-    {
-        self.io = [[BlutoothIO alloc] init];
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [NSThread detachNewThreadSelector:@selector(refreshDeviceRssi:) toTarget:self withObject:nil];
 }
 
-#pragma mark - TableView Delegate
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
-{
-    return [self.io.peripherals count];
-}
-
-- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
-{
-    CBPeripheral *peripheral = [self.io.peripherals objectAtIndex:rowIndex];
-    if(peripheral == NULL)
-        return @"";
-    if([[aTableColumn identifier] isEqualToString:@"deviceName"])
-        return peripheral.name;
-    else if([[aTableColumn identifier] isEqualToString:@"uuid"])
-        return peripheral.identifier.UUIDString;
-    return @"";
+- (void) refreshDeviceRssi:(NSMutableArray *)toProceessDocids{
+    while(true){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            Device* device = (Device*)[[[BlutoothIO getInstance].devices allValues] objectAtIndex:0];
+            [self.rssiLabel setStringValue:[device getRssi]];
+        });
+        [NSThread sleepForTimeInterval:0.3f];
+    }
 }
 
 @end
