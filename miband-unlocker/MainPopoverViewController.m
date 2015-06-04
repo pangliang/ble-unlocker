@@ -13,6 +13,8 @@
 
 @interface MainPopoverViewController ()
 @property(nonatomic,retain)IBOutlet NSTextField* rssiLabel;
+@property(nonatomic,retain)IBOutlet NSTextField* sensitivityLabel;
+@property(nonatomic,retain)IBOutlet NSSlider* sensitivitySlider;
 @property MacLocker* macLocker;
 @end
 
@@ -29,6 +31,10 @@
     [super viewDidLoad];
 }
 
+- (IBAction)sliderMove:(id)sender{
+    [self.sensitivityLabel setStringValue: [NSString stringWithFormat:@"%d",[self.sensitivitySlider intValue]]];
+}
+
 - (void) refreshDeviceRssi:(NSMutableArray *)toProceessDocids{
     while(true){
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -36,14 +42,17 @@
             {
                 Device* device = (Device*)[[[BLEDeviceManager getInstance].devices allValues] objectAtIndex:0];
                 
-                if( device.refreshRssiTimes >=5 )
+                int sensitivity = 10 - [self.sensitivitySlider intValue] + 1;
+                
+                if( device.refreshRssiTimes >= sensitivity )
                 {
-                    [self.rssiLabel setStringValue: [NSString stringWithFormat:@"%4.1f", [device getAvgRssi:5]]];
+                    float avgRssi =  [device getAvgRssi: sensitivity];
+                    [self.rssiLabel setStringValue: [NSString stringWithFormat:@"%4.1f",avgRssi]];
                     
-                    if([device getAvgRssi:5] < -83)
+                    if(avgRssi < -83)
                     {
                         [self.macLocker lock];
-                    }else if([device getAvgRssi:5] > -70){
+                    }else if(avgRssi > -70){
                         [self.macLocker unlock];
                     }
                 }
