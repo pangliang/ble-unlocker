@@ -10,8 +10,9 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 
 @interface Device : NSObject
-- (void)setPeripheral:(CBPeripheral *)peripheral;
-- (CBPeripheral *)getPeripheral;
-- (NSNumber *) getRssi;
-- (void) startAutoRefreshRssi;
+- (id)init:(CBPeripheral *)peripheral;
+- (float) getLastRssi;
+- (float) getAvgRssi:(int) avgTimes;
+- (void) autoRefreshRssi;
+@property int refreshRssiTimes;
 @end

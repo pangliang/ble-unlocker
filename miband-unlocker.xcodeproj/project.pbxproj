@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		810599A01B1EAE3F00DC320D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */; };
-		810599A31B1EAE8200DC320D /* BlutoothIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 810599A21B1EAE8200DC320D /* BlutoothIO.m */; };
+		810599A31B1EAE8200DC320D /* BLEDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 810599A21B1EAE8200DC320D /* BLEDeviceManager.m */; };
 		8125D3BC1B20270F008F125B /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 8125D3BB1B20270F008F125B /* Device.m */; };
 		814194861B1EF133008B6B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815606631B185A95005D160A /* Main.storyboard */; };
 		8156065B1B185A95005D160A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156065A1B185A95005D160A /* AppDelegate.m */; };
@@ -35,8 +35,8 @@
 
 /* Begin PBXFileReference section */
 		8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		810599A11B1EAE8200DC320D /* BlutoothIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlutoothIO.h; sourceTree = "<group>"; };
-		810599A21B1EAE8200DC320D /* BlutoothIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlutoothIO.m; sourceTree = "<group>"; };
+		810599A11B1EAE8200DC320D /* BLEDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDeviceManager.h; sourceTree = "<group>"; };
+		810599A21B1EAE8200DC320D /* BLEDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDeviceManager.m; sourceTree = "<group>"; };
 		8125D3BA1B20270F008F125B /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
 		8125D3BB1B20270F008F125B /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
 		815606541B185A95005D160A /* miband-unlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "miband-unlocker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,8 +112,8 @@
 				815606571B185A95005D160A /* Supporting Files */,
 				8156067A1B185B30005D160A /* MacLocker.h */,
 				8156067B1B185B30005D160A /* MacLocker.m */,
-				810599A11B1EAE8200DC320D /* BlutoothIO.h */,
-				810599A21B1EAE8200DC320D /* BlutoothIO.m */,
+				810599A11B1EAE8200DC320D /* BLEDeviceManager.h */,
+				810599A21B1EAE8200DC320D /* BLEDeviceManager.m */,
 				819015701B1EFFE300FC2350 /* MainPopoverViewController.h */,
 				819015711B1EFFE300FC2350 /* MainPopoverViewController.m */,
 				819015721B1EFFE300FC2350 /* MainPopoverViewController.xib */,
@@ -250,7 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				810599A31B1EAE8200DC320D /* BlutoothIO.m in Sources */,
+				810599A31B1EAE8200DC320D /* BLEDeviceManager.m in Sources */,
 				8156065D1B185A95005D160A /* main.m in Sources */,
 				8156065B1B185A95005D160A /* AppDelegate.m in Sources */,
 				8125D3BC1B20270F008F125B /* Device.m in Sources */,

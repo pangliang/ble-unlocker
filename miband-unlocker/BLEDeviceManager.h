@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface BlutoothIO : NSObject
+@interface BLEDeviceManager : NSObject
 @property (strong,atomic) NSMutableDictionary *devices;
-+ (BlutoothIO*) getInstance;
++ (BLEDeviceManager*) getInstance;
 @end

@@ -6,23 +6,23 @@
 //  Copyright (c) 2015年 pangliang. All rights reserved.
 //
 
-#import "BlutoothIO.h"
+#import "BLEDeviceManager.h"
 #import "Device.h"
-@interface BlutoothIO()<CBCentralManagerDelegate>
+@interface BLEDeviceManager()<CBCentralManagerDelegate>
 @property (strong,nonatomic) CBCentralManager* central;
 @end
 
 NSLock *lock;
-BlutoothIO* instance;
+BLEDeviceManager* instance;
 
-@implementation BlutoothIO
+@implementation BLEDeviceManager
 
-+ (BlutoothIO*) getInstance
++ (BLEDeviceManager*) getInstance
 {
     [lock lock];
     if(instance == NULL)
     {
-        instance = [[BlutoothIO alloc] init];
+        instance = [[BLEDeviceManager alloc] init];
     }
     [lock unlock];
     return instance;
@@ -55,11 +55,10 @@ BlutoothIO* instance;
     Device* device = [self.devices valueForKey:peripheral.identifier.UUIDString];
     if(device == NULL)
     {
-        device = [[Device alloc] init];
-        [device setPeripheral:peripheral];
+        device = [[Device alloc] init:peripheral];
         [self.devices setValue:device forKey: peripheral.identifier.UUIDString];
     }
-    [device startAutoRefreshRssi];
+    [device autoRefreshRssi];
 }
 
 - (void)centralManager:(CBCentralManager *)central
@@ -108,8 +107,7 @@ didFailToConnectPeripheral:(CBPeripheral *)peripheral
     Device* device = [self.devices valueForKey:peripheral.identifier.UUIDString];
     if(device == NULL)
     {
-        device = [[Device alloc] init];
-        [device setPeripheral:peripheral];
+        device = [[Device alloc] init:peripheral];
         [self.devices setValue:device forKey: peripheral.identifier.UUIDString];
         
         [central connectPeripheral:peripheral options:nil];

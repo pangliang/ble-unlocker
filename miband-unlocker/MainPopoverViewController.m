@@ -7,7 +7,7 @@
 //
 
 #import "MainPopoverViewController.h"
-#import "BlutoothIO.h"
+#import "BLEDeviceManager.h"
 #import "Device.h"
 #import "MacLocker.h"
 
@@ -18,34 +18,39 @@
 
 @implementation MainPopoverViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (id)init{
+    self = [super init];
     self.macLocker = [[MacLocker alloc] init];
     [NSThread detachNewThreadSelector:@selector(refreshDeviceRssi:) toTarget:self withObject:nil];
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
 }
 
 - (void) refreshDeviceRssi:(NSMutableArray *)toProceessDocids{
     while(true){
         dispatch_async(dispatch_get_main_queue(), ^{
-            if([[BlutoothIO getInstance].devices count] > 0)
+            if([[BLEDeviceManager getInstance].devices count] > 0)
             {
-                Device* device = (Device*)[[[BlutoothIO getInstance].devices allValues] objectAtIndex:0];
+                Device* device = (Device*)[[[BLEDeviceManager getInstance].devices allValues] objectAtIndex:0];
                 
-                if( [device getRssi] != nil)
+                if( device.refreshRssiTimes >=5 )
                 {
-                    [self.rssiLabel setStringValue: [[device getRssi] stringValue]];
+                    [self.rssiLabel setStringValue: [NSString stringWithFormat:@"%4.1f", [device getAvgRssi:5]]];
                     
-                    if([[device getRssi] floatValue] < -83)
+                    if([device getAvgRssi:5] < -83)
                     {
                         [self.macLocker lock];
-                    }else if([[device getRssi] floatValue] > -70){
+                    }else if([device getAvgRssi:5] > -70){
                         [self.macLocker unlock];
                     }
                 }
                 
             }
         });
-        [NSThread sleepForTimeInterval:0.3f];
+        [NSThread sleepForTimeInterval:0.7f];
     }
 }
 

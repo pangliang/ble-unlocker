@@ -10,52 +10,66 @@
 
 @interface Device()<CBPeripheralDelegate>
 
-@property(nonatomic) CBPeripheral *peri;
-@property(atomic,strong) NSNumber * rssi;
-@property bool isStartAutoRefreshRssi;
-@property long refreshRssiTimes;
+@property(nonatomic) CBPeripheral *peripheral;
+@property bool isAutoRefreshRssi;
+@property NSMutableArray* rssiList;
+
 @end
+
+int MaxRssiInStore = 10;
 
 @implementation Device
 
-- (id)init{
+- (id)init:(CBPeripheral *)peripheral{
     self = [super init];
+    self.peripheral = peripheral;
+    self.peripheral.delegate = self;
+    self.refreshRssiTimes = 0;
+    self.rssiList = [[NSMutableArray alloc] initWithCapacity:MaxRssiInStore];
     return self;
 }
 
-- (void)setPeripheral:(CBPeripheral *)peripheral{
-    self.peri = peripheral;
-    self.peri.delegate = self;
-}
-
-- (CBPeripheral *)getPeripheral{
-    return self.peri;
-}
-
 - (void)peripheralDidUpdateRSSI:(CBPeripheral *)peripheral error:(NSError *)error{
-    NSLog(@"UpdateRSSI %ld,%@", self.refreshRssiTimes, peripheral.RSSI);
+    NSLog(@"UpdateRSSI %@,%d,%d,%@",peripheral.name, self.refreshRssiTimes,(self.refreshRssiTimes % MaxRssiInStore), peripheral.RSSI);
     
-    self.rssi = peripheral.RSSI;
+    [self.rssiList setObject:peripheral.RSSI atIndexedSubscript:(self.refreshRssiTimes % MaxRssiInStore) ];
+    self.refreshRssiTimes++;
     
-    [self refreshRssi:nil];
-}
-
-- (NSNumber*) getRssi{
-    return self.rssi;
-}
-
-- (void)refreshRssi:(NSMutableArray *)toProceessDocids{
-//    [NSThread sleepForTimeInterval:0.1f];
-    if(self.isStartAutoRefreshRssi){
-        self.refreshRssiTimes++;
-        [self.peri readRSSI];
+    if(self.isAutoRefreshRssi && self.peripheral.state == CBPeripheralStateConnected){
+        [self.peripheral readRSSI];
     }
+    
+//    NSLog(@"%@",self.rssiList);
 }
 
-- (void) startAutoRefreshRssi{
-    NSLog(@"startAutoRefreshRssi: %@", self.peri.name);
-    self.isStartAutoRefreshRssi = true;
-    [NSThread detachNewThreadSelector:@selector(refreshRssi:) toTarget:self withObject:nil];
+- (float) getLastRssi{
+    return [[self.rssiList objectAtIndex:(self.refreshRssiTimes % MaxRssiInStore)] floatValue];
+}
+
+- (float) getAvgRssi:(int) avgTimes{
+    if(avgTimes > MaxRssiInStore)
+        avgTimes = MaxRssiInStore;
+    if(avgTimes > self.refreshRssiTimes)
+        avgTimes = (int)self.refreshRssiTimes;
+    float sum = 0;
+    for(int i=1;i<=avgTimes;i++)
+    {
+        int index = (self.refreshRssiTimes % MaxRssiInStore) - i;
+        if(index < 0)
+            index = MaxRssiInStore + index;
+//        printf("%1.0f,",[((NSNumber*)[self.rssiList objectAtIndex:index]) floatValue]);
+        sum += [((NSNumber*)[self.rssiList objectAtIndex:index]) floatValue];
+    }
+    
+//    printf("\n");
+    
+    return sum/avgTimes;
+}
+
+- (void) autoRefreshRssi{
+    NSLog(@"autoRefreshRssi: %@",self.peripheral.name);
+    self.isAutoRefreshRssi = true;
+    [self.peripheral readRSSI];
 }
 
 @end

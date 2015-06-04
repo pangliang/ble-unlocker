@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainPopoverViewController.h"
-#import "BlutoothIO.h"
+#import "BLEDeviceManager.h"
 
 @interface AppDelegate()
 @property (strong, nonatomic) NSStatusItem *statusItem;
@@ -20,7 +20,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self initStatusItem];
     
-    [BlutoothIO getInstance];
+    [BLEDeviceManager getInstance];
 }
 
 - (void)initStatusItem{
