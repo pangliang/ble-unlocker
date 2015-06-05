@@ -40,11 +40,26 @@ BLEDeviceManager* instance;
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
+    self.central = central;
+    self.central.delegate = self;
     NSLog(@"centralManagerDidUpdateState:%ld",central.state);
     if (central.state == CBCentralManagerStatePoweredOn) {
         NSLog(@"scanForPeripheralsWithServices");
         [central scanForPeripheralsWithServices:nil
                                         options:nil];
+        
+        if([self.devices count] >0)
+        {
+            Device* device = (Device*)[[self.devices allValues] objectAtIndex:0];
+            
+            NSArray* knowPeripherals = [self.central retrievePeripheralsWithIdentifiers:[NSArray arrayWithObject:device.peripheral.identifier]];
+            NSLog(@"%@",knowPeripherals);
+            if([knowPeripherals count] == 1 && ((CBPeripheral *)[knowPeripherals objectAtIndex:0]).identifier == device.peripheral.identifier)
+            {
+                [self.central connectPeripheral:[knowPeripherals objectAtIndex:0] options:nil];
+            }
+        }
+        
         
     }
 }
@@ -59,6 +74,9 @@ BLEDeviceManager* instance;
         [self.devices setValue:device forKey: peripheral.identifier.UUIDString];
     }
     [device autoRefreshRssi];
+    
+    [peripheral discoverServices:nil];
+    
 }
 
 - (void)centralManager:(CBCentralManager *)central
@@ -102,14 +120,17 @@ didFailToConnectPeripheral:(CBPeripheral *)peripheral
                   RSSI:(NSNumber *)RSSI {
     
     NSLog(@"Discovered %@,%@", peripheral.name, peripheral.identifier.UUIDString);
-
+//    [central stopScan];
     
     Device* device = [self.devices valueForKey:peripheral.identifier.UUIDString];
     if(device == NULL)
     {
         device = [[Device alloc] init:peripheral];
         [self.devices setValue:device forKey: peripheral.identifier.UUIDString];
-        
+    }
+    
+    if(peripheral.state == CBPeripheralStateDisconnected)
+    {
         [central connectPeripheral:peripheral options:nil];
     }
 }

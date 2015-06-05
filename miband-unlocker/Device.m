@@ -10,7 +10,6 @@
 
 @interface Device()<CBPeripheralDelegate>
 
-@property(nonatomic) CBPeripheral *peripheral;
 @property bool isAutoRefreshRssi;
 @property NSMutableArray* rssiList;
 

@@ -15,4 +15,5 @@
 - (float) getAvgRssi:(int) avgTimes;
 - (void) autoRefreshRssi;
 @property int refreshRssiTimes;
+@property(nonatomic) CBPeripheral *peripheral;
 @end
