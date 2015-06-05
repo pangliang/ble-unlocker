@@ -11,6 +11,7 @@
 		810599A31B1EAE8200DC320D /* BLEDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 810599A21B1EAE8200DC320D /* BLEDeviceManager.m */; };
 		8125D3BC1B20270F008F125B /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 8125D3BB1B20270F008F125B /* Device.m */; };
 		814194861B1EF133008B6B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815606631B185A95005D160A /* Main.storyboard */; };
+		814AF7161B21C7F200367862 /* icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 814AF7151B21C7F200367862 /* icon-64.png */; };
 		8156065B1B185A95005D160A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156065A1B185A95005D160A /* AppDelegate.m */; };
 		8156065D1B185A95005D160A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156065C1B185A95005D160A /* main.m */; };
 		815606621B185A95005D160A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815606611B185A95005D160A /* Images.xcassets */; };
@@ -39,6 +40,7 @@
 		810599A21B1EAE8200DC320D /* BLEDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDeviceManager.m; sourceTree = "<group>"; };
 		8125D3BA1B20270F008F125B /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
 		8125D3BB1B20270F008F125B /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
+		814AF7151B21C7F200367862 /* icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-64.png"; sourceTree = "<group>"; };
 		815606541B185A95005D160A /* miband-unlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "miband-unlocker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		815606581B185A95005D160A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815606591B185A95005D160A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		8156064B1B185A95005D160A = {
 			isa = PBXGroup;
 			children = (
+				814AF7151B21C7F200367862 /* icon-64.png */,
 				819015781B1F1A6D00FC2350 /* AppKit.framework */,
 				819015761B1F19B500FC2350 /* CoreFoundation.framework */,
 				8190156A1B1EF50900FC2350 /* Chain_links_24.png */,
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				814AF7161B21C7F200367862 /* icon-64.png in Resources */,
 				815606621B185A95005D160A /* Images.xcassets in Resources */,
 				819015741B1EFFE300FC2350 /* MainPopoverViewController.xib in Resources */,
 				8190156B1B1EF50900FC2350 /* Chain_links_24.png in Resources */,
@@ -379,6 +383,7 @@
 				);
 				INFOPLIST_FILE = "miband-unlocker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -394,6 +399,7 @@
 				);
 				INFOPLIST_FILE = "miband-unlocker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

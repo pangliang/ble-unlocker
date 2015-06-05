@@ -21,6 +21,7 @@
     [self initStatusItem];
     
     [BLEDeviceManager getInstance];
+    
 }
 
 - (void)initStatusItem{
