@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:miband-unlocker.xcodeproj">
+      location = "self:/Volumes/d/miband-unlocker/ble-unlocker.xcodeproj">
    </FileRef>
 </Workspace>

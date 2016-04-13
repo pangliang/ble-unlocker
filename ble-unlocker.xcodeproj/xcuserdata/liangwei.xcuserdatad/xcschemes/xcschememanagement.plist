@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>miband-unlocker.xcscheme</key>
+		<key>ble-unlocker.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>

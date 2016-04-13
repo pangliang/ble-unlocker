@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		810599A01B1EAE3F00DC320D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */; };
-		810599A31B1EAE8200DC320D /* BLEDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 810599A21B1EAE8200DC320D /* BLEDeviceManager.m */; };
-		8125D3BC1B20270F008F125B /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 8125D3BB1B20270F008F125B /* Device.m */; };
-		814194861B1EF133008B6B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815606631B185A95005D160A /* Main.storyboard */; };
 		814AF7161B21C7F200367862 /* icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 814AF7151B21C7F200367862 /* icon-64.png */; };
-		8156065B1B185A95005D160A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156065A1B185A95005D160A /* AppDelegate.m */; };
-		8156065D1B185A95005D160A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156065C1B185A95005D160A /* main.m */; };
-		815606621B185A95005D160A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815606611B185A95005D160A /* Images.xcassets */; };
-		815606711B185A95005D160A /* miband_unlockerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815606701B185A95005D160A /* miband_unlockerTests.m */; };
-		8156067C1B185B30005D160A /* MacLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156067B1B185B30005D160A /* MacLocker.m */; };
 		8190156B1B1EF50900FC2350 /* Chain_links_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8190156A1B1EF50900FC2350 /* Chain_links_24.png */; };
-		819015731B1EFFE300FC2350 /* MainPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819015711B1EFFE300FC2350 /* MainPopoverViewController.m */; };
-		819015741B1EFFE300FC2350 /* MainPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819015721B1EFFE300FC2350 /* MainPopoverViewController.xib */; };
 		819015751B1F198600FC2350 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */; };
 		819015791B1F1A6D00FC2350 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819015781B1F1A6D00FC2350 /* AppKit.framework */; };
+		81C42E871CBE445200932E3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C42E781CBE445200932E3C /* AppDelegate.m */; };
+		81C42E881CBE445200932E3C /* BLEDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C42E7A1CBE445200932E3C /* BLEDeviceManager.m */; };
+		81C42E891CBE445200932E3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C42E7B1CBE445200932E3C /* Main.storyboard */; };
+		81C42E8A1CBE445200932E3C /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C42E7E1CBE445200932E3C /* Device.m */; };
+		81C42E8B1CBE445200932E3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C42E7F1CBE445200932E3C /* Images.xcassets */; };
+		81C42E8C1CBE445200932E3C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81C42E801CBE445200932E3C /* Info.plist */; };
+		81C42E8D1CBE445200932E3C /* MacLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C42E821CBE445200932E3C /* MacLocker.m */; };
+		81C42E8E1CBE445200932E3C /* MainPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C42E841CBE445200932E3C /* MainPopoverViewController.m */; };
+		81C42E8F1CBE445200932E3C /* MainPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C42E851CBE445200932E3C /* MainPopoverViewController.xib */; };
+		81C42E901CBE445200932E3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C42E861CBE445200932E3C /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,29 +36,27 @@
 
 /* Begin PBXFileReference section */
 		8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		810599A11B1EAE8200DC320D /* BLEDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDeviceManager.h; sourceTree = "<group>"; };
-		810599A21B1EAE8200DC320D /* BLEDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDeviceManager.m; sourceTree = "<group>"; };
-		8125D3BA1B20270F008F125B /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
-		8125D3BB1B20270F008F125B /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
 		814AF7151B21C7F200367862 /* icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-64.png"; sourceTree = "<group>"; };
-		815606541B185A95005D160A /* miband-unlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "miband-unlocker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		815606581B185A95005D160A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		815606591B185A95005D160A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8156065A1B185A95005D160A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8156065C1B185A95005D160A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		815606611B185A95005D160A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		815606641B185A95005D160A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8156066A1B185A95005D160A /* miband-unlockerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "miband-unlockerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8156066F1B185A95005D160A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		815606701B185A95005D160A /* miband_unlockerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = miband_unlockerTests.m; sourceTree = "<group>"; };
-		8156067A1B185B30005D160A /* MacLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacLocker.h; sourceTree = "<group>"; };
-		8156067B1B185B30005D160A /* MacLocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacLocker.m; sourceTree = "<group>"; };
+		815606541B185A95005D160A /* ble-unlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ble-unlocker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8156066A1B185A95005D160A /* ble-unlocker.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ble-unlocker.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8190156A1B1EF50900FC2350 /* Chain_links_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chain_links_24.png; sourceTree = "<group>"; };
-		819015701B1EFFE300FC2350 /* MainPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPopoverViewController.h; sourceTree = "<group>"; };
-		819015711B1EFFE300FC2350 /* MainPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPopoverViewController.m; sourceTree = "<group>"; };
-		819015721B1EFFE300FC2350 /* MainPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainPopoverViewController.xib; sourceTree = "<group>"; };
 		819015761B1F19B500FC2350 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		819015781B1F1A6D00FC2350 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		81C42E771CBE445200932E3C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		81C42E781CBE445200932E3C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		81C42E791CBE445200932E3C /* BLEDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDeviceManager.h; sourceTree = "<group>"; };
+		81C42E7A1CBE445200932E3C /* BLEDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDeviceManager.m; sourceTree = "<group>"; };
+		81C42E7C1CBE445200932E3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		81C42E7D1CBE445200932E3C /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		81C42E7E1CBE445200932E3C /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
+		81C42E7F1CBE445200932E3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		81C42E801CBE445200932E3C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81C42E811CBE445200932E3C /* MacLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacLocker.h; sourceTree = "<group>"; };
+		81C42E821CBE445200932E3C /* MacLocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacLocker.m; sourceTree = "<group>"; };
+		81C42E831CBE445200932E3C /* MainPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPopoverViewController.h; sourceTree = "<group>"; };
+		81C42E841CBE445200932E3C /* MainPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPopoverViewController.m; sourceTree = "<group>"; };
+		81C42E851CBE445200932E3C /* MainPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainPopoverViewController.xib; sourceTree = "<group>"; };
+		81C42E861CBE445200932E3C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,74 +88,48 @@
 				819015761B1F19B500FC2350 /* CoreFoundation.framework */,
 				8190156A1B1EF50900FC2350 /* Chain_links_24.png */,
 				8105999F1B1EAE3F00DC320D /* CoreBluetooth.framework */,
-				815606561B185A95005D160A /* miband-unlocker */,
-				8156066D1B185A95005D160A /* miband-unlockerTests */,
 				815606551B185A95005D160A /* Products */,
+				81C42E761CBE445200932E3C /* ble-unlocker */,
 			);
 			sourceTree = "<group>";
 		};
 		815606551B185A95005D160A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				815606541B185A95005D160A /* miband-unlocker.app */,
-				8156066A1B185A95005D160A /* miband-unlockerTests.xctest */,
+				815606541B185A95005D160A /* ble-unlocker.app */,
+				8156066A1B185A95005D160A /* ble-unlocker.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		815606561B185A95005D160A /* miband-unlocker */ = {
+		81C42E761CBE445200932E3C /* ble-unlocker */ = {
 			isa = PBXGroup;
 			children = (
-				815606591B185A95005D160A /* AppDelegate.h */,
-				8156065A1B185A95005D160A /* AppDelegate.m */,
-				815606611B185A95005D160A /* Images.xcassets */,
-				815606631B185A95005D160A /* Main.storyboard */,
-				815606571B185A95005D160A /* Supporting Files */,
-				8156067A1B185B30005D160A /* MacLocker.h */,
-				8156067B1B185B30005D160A /* MacLocker.m */,
-				810599A11B1EAE8200DC320D /* BLEDeviceManager.h */,
-				810599A21B1EAE8200DC320D /* BLEDeviceManager.m */,
-				819015701B1EFFE300FC2350 /* MainPopoverViewController.h */,
-				819015711B1EFFE300FC2350 /* MainPopoverViewController.m */,
-				819015721B1EFFE300FC2350 /* MainPopoverViewController.xib */,
-				8125D3BA1B20270F008F125B /* Device.h */,
-				8125D3BB1B20270F008F125B /* Device.m */,
+				81C42E771CBE445200932E3C /* AppDelegate.h */,
+				81C42E781CBE445200932E3C /* AppDelegate.m */,
+				81C42E791CBE445200932E3C /* BLEDeviceManager.h */,
+				81C42E7A1CBE445200932E3C /* BLEDeviceManager.m */,
+				81C42E7B1CBE445200932E3C /* Main.storyboard */,
+				81C42E7D1CBE445200932E3C /* Device.h */,
+				81C42E7E1CBE445200932E3C /* Device.m */,
+				81C42E7F1CBE445200932E3C /* Images.xcassets */,
+				81C42E801CBE445200932E3C /* Info.plist */,
+				81C42E811CBE445200932E3C /* MacLocker.h */,
+				81C42E821CBE445200932E3C /* MacLocker.m */,
+				81C42E831CBE445200932E3C /* MainPopoverViewController.h */,
+				81C42E841CBE445200932E3C /* MainPopoverViewController.m */,
+				81C42E851CBE445200932E3C /* MainPopoverViewController.xib */,
+				81C42E861CBE445200932E3C /* main.m */,
 			);
-			path = "miband-unlocker";
-			sourceTree = "<group>";
-		};
-		815606571B185A95005D160A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				815606581B185A95005D160A /* Info.plist */,
-				8156065C1B185A95005D160A /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8156066D1B185A95005D160A /* miband-unlockerTests */ = {
-			isa = PBXGroup;
-			children = (
-				815606701B185A95005D160A /* miband_unlockerTests.m */,
-				8156066E1B185A95005D160A /* Supporting Files */,
-			);
-			path = "miband-unlockerTests";
-			sourceTree = "<group>";
-		};
-		8156066E1B185A95005D160A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8156066F1B185A95005D160A /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = "ble-unlocker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		815606531B185A95005D160A /* miband-unlocker */ = {
+		815606531B185A95005D160A /* ble-unlocker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 815606741B185A95005D160A /* Build configuration list for PBXNativeTarget "miband-unlocker" */;
+			buildConfigurationList = 815606741B185A95005D160A /* Build configuration list for PBXNativeTarget "ble-unlocker" */;
 			buildPhases = (
 				815606501B185A95005D160A /* Sources */,
 				815606511B185A95005D160A /* Frameworks */,
@@ -167,14 +139,14 @@
 			);
 			dependencies = (
 			);
-			name = "miband-unlocker";
+			name = "ble-unlocker";
 			productName = "miband-unlocker";
-			productReference = 815606541B185A95005D160A /* miband-unlocker.app */;
+			productReference = 815606541B185A95005D160A /* ble-unlocker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		815606691B185A95005D160A /* miband-unlockerTests */ = {
+		815606691B185A95005D160A /* ble-unlockerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 815606771B185A95005D160A /* Build configuration list for PBXNativeTarget "miband-unlockerTests" */;
+			buildConfigurationList = 815606771B185A95005D160A /* Build configuration list for PBXNativeTarget "ble-unlockerTests" */;
 			buildPhases = (
 				815606661B185A95005D160A /* Sources */,
 				815606671B185A95005D160A /* Frameworks */,
@@ -185,9 +157,9 @@
 			dependencies = (
 				8156066C1B185A95005D160A /* PBXTargetDependency */,
 			);
-			name = "miband-unlockerTests";
+			name = "ble-unlockerTests";
 			productName = "miband-unlockerTests";
-			productReference = 8156066A1B185A95005D160A /* miband-unlockerTests.xctest */;
+			productReference = 8156066A1B185A95005D160A /* ble-unlocker.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +180,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8156064F1B185A95005D160A /* Build configuration list for PBXProject "miband-unlocker" */;
+			buildConfigurationList = 8156064F1B185A95005D160A /* Build configuration list for PBXProject "ble-unlocker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -221,8 +193,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				815606531B185A95005D160A /* miband-unlocker */,
-				815606691B185A95005D160A /* miband-unlockerTests */,
+				815606531B185A95005D160A /* ble-unlocker */,
+				815606691B185A95005D160A /* ble-unlockerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,11 +204,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C42E891CBE445200932E3C /* Main.storyboard in Resources */,
+				81C42E8F1CBE445200932E3C /* MainPopoverViewController.xib in Resources */,
+				81C42E8B1CBE445200932E3C /* Images.xcassets in Resources */,
 				814AF7161B21C7F200367862 /* icon-64.png in Resources */,
-				815606621B185A95005D160A /* Images.xcassets in Resources */,
-				819015741B1EFFE300FC2350 /* MainPopoverViewController.xib in Resources */,
+				81C42E8C1CBE445200932E3C /* Info.plist in Resources */,
 				8190156B1B1EF50900FC2350 /* Chain_links_24.png in Resources */,
-				814194861B1EF133008B6B96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				810599A31B1EAE8200DC320D /* BLEDeviceManager.m in Sources */,
-				8156065D1B185A95005D160A /* main.m in Sources */,
-				8156065B1B185A95005D160A /* AppDelegate.m in Sources */,
-				8125D3BC1B20270F008F125B /* Device.m in Sources */,
-				819015731B1EFFE300FC2350 /* MainPopoverViewController.m in Sources */,
-				8156067C1B185B30005D160A /* MacLocker.m in Sources */,
+				81C42E8A1CBE445200932E3C /* Device.m in Sources */,
+				81C42E871CBE445200932E3C /* AppDelegate.m in Sources */,
+				81C42E881CBE445200932E3C /* BLEDeviceManager.m in Sources */,
+				81C42E8D1CBE445200932E3C /* MacLocker.m in Sources */,
+				81C42E901CBE445200932E3C /* main.m in Sources */,
+				81C42E8E1CBE445200932E3C /* MainPopoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +240,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815606711B185A95005D160A /* miband_unlockerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,16 +248,16 @@
 /* Begin PBXTargetDependency section */
 		8156066C1B185A95005D160A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 815606531B185A95005D160A /* miband-unlocker */;
+			target = 815606531B185A95005D160A /* ble-unlocker */;
 			targetProxy = 8156066B1B185A95005D160A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		815606631B185A95005D160A /* Main.storyboard */ = {
+		81C42E7B1CBE445200932E3C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				815606641B185A95005D160A /* Base */,
+				81C42E7C1CBE445200932E3C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -381,10 +353,11 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
-				INFOPLIST_FILE = "miband-unlocker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ble-unlocker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhaoxiaodan.ble-unlocker";
+				PRODUCT_NAME = "ble-unlocker";
 			};
 			name = Debug;
 		};
@@ -397,10 +370,11 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
-				INFOPLIST_FILE = "miband-unlocker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ble-unlocker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhaoxiaodan.ble-unlocker";
+				PRODUCT_NAME = "ble-unlocker";
 			};
 			name = Release;
 		};
@@ -419,8 +393,8 @@
 				);
 				INFOPLIST_FILE = "miband-unlockerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/miband-unlocker.app/Contents/MacOS/miband-unlocker";
+				PRODUCT_NAME = "ble-unlocker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ble-unlocker.app/Contents/MacOS/ble-unlocker";
 			};
 			name = Debug;
 		};
@@ -435,15 +409,15 @@
 				);
 				INFOPLIST_FILE = "miband-unlockerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/miband-unlocker.app/Contents/MacOS/miband-unlocker";
+				PRODUCT_NAME = "ble-unlocker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ble-unlocker.app/Contents/MacOS/ble-unlocker";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8156064F1B185A95005D160A /* Build configuration list for PBXProject "miband-unlocker" */ = {
+		8156064F1B185A95005D160A /* Build configuration list for PBXProject "ble-unlocker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				815606721B185A95005D160A /* Debug */,
@@ -452,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		815606741B185A95005D160A /* Build configuration list for PBXNativeTarget "miband-unlocker" */ = {
+		815606741B185A95005D160A /* Build configuration list for PBXNativeTarget "ble-unlocker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				815606751B185A95005D160A /* Debug */,
@@ -461,7 +435,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		815606771B185A95005D160A /* Build configuration list for PBXNativeTarget "miband-unlockerTests" */ = {
+		815606771B185A95005D160A /* Build configuration list for PBXNativeTarget "ble-unlockerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				815606781B185A95005D160A /* Debug */,
